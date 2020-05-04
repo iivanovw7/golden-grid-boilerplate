@@ -1,0 +1,27 @@
+- const displaySpinner = spinner
+
+include ../config/meta
+include ../components/mixins/mixins
+block config
+
+doctype html
+html(lang= lang)
+  block sharedVars
+
+  head
+    if displaySpinner
+      include ../components/loader
+    include ../components/head
+
+  body
+    include ../components/header
+
+    main.base-template
+      section
+        block content
+
+    include ../components/footer
+    include ../components/app-bar
+
+  noscript
+    p You need to enable JavaScript to run this app.

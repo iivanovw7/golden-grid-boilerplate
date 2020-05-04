@@ -1,0 +1,71 @@
+.icon-btn {
+  padding: 0;
+
+  svg {
+    transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+    stroke: $defaultTextColor;
+    fill: $defaultTextColor;
+    margin: 0 auto;
+
+    &:hover, &:focus {
+      stroke: $primaryColor;
+      fill: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.text-btn {
+  @mixin customButton text;
+
+  padding: 0;
+}
+
+#home-content .navigation .icon-btn {
+  position: fixed;
+}
+
+#home-content .navigation svg {
+  stroke-width: 3.5;
+}
+
+#home-content .play svg {
+  stroke-width: 20;
+}
+
+#home-content .search svg {
+  stroke-width: 2;
+}
+
+#home-content .social .icon-btn {
+  margin-bottom: units(8);
+}
+
+@mixin media width, md, xxl  {
+  .icon-btn {
+    @mixin customButton icon, units(28), units(28);
+
+    svg {
+      width: units(26);
+      height: units(26);
+    }
+  }
+}
+
+@mixin media width, xs, md {
+  .icon-btn {
+    @mixin customButton icon, units(36), units(36);
+
+    svg {
+      width: units(34);
+      height: units(34);
+    }
+  }
+}
+
+
+
+
+
+
+

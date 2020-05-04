@@ -1,0 +1,89 @@
+extends ../layouts/home
+
+append config
+  - var title = "Home page - Golden canon grid website boilerplate";
+  - var metaDesc = "Georgina Alson portfolio golden canon grid website boilerplate created with css grid";
+
+block content
+  append sharedVars
+    - var currentNav = '/index.html';
+    - var icons = social;
+    - var details = home;
+    - var pages = ['01', '02', '03', '04', '05'];
+
+  script.
+    // Handles active page displaying, for demonstration purposes
+    function setActiveSelector(selectors, id) {
+      if (selectors && selectors.length) {
+        let el = selectors.length;
+
+        while (el--) {
+          console.log(selectors[el].innerText)
+          if (selectors[el].innerText === `0${id}`) {
+            selectors[el].classList.add('active');
+          } else {
+            selectors[el].classList.remove('active');
+          }
+        }
+      }
+    }
+    // Handles page changes, for demonstration purposes
+    function setCurrentPage(id) {
+      const indicator = document.getElementById('home-page-indicator');
+      const selectors = document.getElementsByClassName('pages-selector-child');
+
+      if (indicator) {
+        indicator.innerHTML= `<h2>0${id}</h2>`
+      }
+
+      setActiveSelector(selectors, id);
+    }
+
+  main.wrapper
+    article#home-content
+      div.navigation.container__flex-row
+        button#sidebar-btn.icon-btn.ripple
+          +icon('#menu', 'menu')
+        a.text-link(href= details.menuLink_1.link)= details.menuLink_1.name
+        a.text-link(href= details.menuLink_2.link)= details.menuLink_2.name
+
+      div.search.container__flex-col
+        button.icon-btn.ripple
+          +icon('#search', 'search')
+
+      div.social.container__flex-col
+        +socialIcons(icons)
+
+      div.name.no-select
+        h1= details.name
+        h1= details.surname
+
+      div.profession.container__flex-col.no-select
+        h3= details.profession
+
+      div.profile.container__flex-col
+        a.text-link(href= details.profileLink.link)= details.profileLink.name
+
+      div.page-number.container__flex-row.no-select#home-page-indicator
+        h2= `${pages[1]}`
+
+      div.page-number-line.container
+        +icon('#vertical-line', 'vertical-line')
+
+      div.page-selector
+        +pagesSelector(pages)
+
+      div.play.container__flex-col
+        button.icon-btn.ripple
+          +icon('#play', 'play')
+
+      div.logo.container__flex-col
+        a.image-link(href="/")
+          img(src="/assets/img/logo.png" alt="logo")
+
+      div.bg-block-1
+      div.bg-block-2
+    //article#home-clients
+    //  h2 client
+    //article#home-news
+    //  h2 news

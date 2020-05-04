@@ -1,0 +1,66 @@
+.text-link,
+.menu-link {
+  color: $defaultTextColor;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: $primaryColor;
+  }
+}
+
+.image-link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#home-content .navigation .text-link {
+  margin-left: units(32);
+}
+
+#home-content .profile .text-link {
+  padding: units(12);
+  color: $bgColor;
+
+  &:hover {
+    cursor: pointer;
+    color: $defaultTextColor;
+  }
+}
+
+#home-content .navigation {
+  .text-link:first-of-type {
+    margin-left: units(64);
+  }
+}
+
+@mixin media width, xs, md {
+  .profile .text-link {
+    background: $bgHomeColor_2;
+  }
+}
+
+@mixin media width, md, xxl  {
+  #home-content .navigation .text-link {
+    margin-top: units(7);
+  }
+}
+
+@mixin media width, xs, md  {
+  #home-content .navigation .text-link {
+    margin-top: units(12);
+  }
+}
+
+@mixin media width, sm, md {
+  #home-content .navigation .text-link {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+

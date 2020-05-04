@@ -1,0 +1,102 @@
+/* Main typography setup */
+@font-face {
+  font-family: $titleFontFamily;
+  font-weight: $regular;
+  src: local($titleFontLocal), url($titleFontLocalTtf) format('truetype');
+  src: local($titleFontLocal), url($titleFontLocalOtf) format('opentype');
+  src: url(../$titleGoogleFont);
+}
+
+@font-face {
+  font-family: $baseFontFamily;
+  font-weight: $bold;
+  src: local($baseFontLocal), url($baseFontLocalSemiBoldTtf) format('truetype');
+  src: url(../$baseGoogleFont);
+}
+
+@font-face {
+  font-family: $baseFontFamily;
+  font-weight: $extraBold;
+  src: local($baseFontLocal), url($baseFontLocalExtraBoldTtf) format('truetype');
+  src: url(../$baseGoogleFont);
+}
+
+/* Applying main application font */
+html {
+  font-family: $baseFontFamily;
+  font-weight: $bold;
+}
+
+body {
+  @mixin fonts;
+}
+
+h1 {
+  font-family: $titleFontFamily;
+  font-weight: $regular;
+}
+
+h3 {
+  font-weight: $regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+#home-content .name,
+#home-content .profession,
+#home-content .page-number {
+  h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+#home-content .name h1 {
+  letter-spacing: units(2);
+
+  @mixin media height, xxl {
+    font-size: units(80);
+  }
+
+  @mixin media width, xs, sm {
+    font-size: units(35);
+  }
+
+  @mixin media width, sm, md {
+    font-size: units(45);
+  }
+
+  @mixin media width, md, xxl {
+    font-size: units(60);
+  }
+}
+
+#home-content .profession h3 {
+  letter-spacing: units(3);
+}
+
+#home-content .text-link {
+  font-size: units(14);
+  font-weight: $extraBold;
+  letter-spacing: units(3);
+}
+
+#home-content .page-number h2 {
+  @mixin animate fade-in-top, 0.5;
+
+  font-size: units(18);
+  font-weight: $bold;
+  transform: rotate(270deg);
+  transform-origin: center center 0;
+  margin: 0;
+}
+
+#home-content .page-selector ul {
+  font-size: units(16);
+  letter-spacing: units(3);
+  font-weight: $bold;
+}
+
+

@@ -1,0 +1,15 @@
+extends ../layouts/base
+
+append config
+  - var title = "Page not found! - Golden canon grid website boilerplate"
+  - var metaDesc = 'Golden canon grid website boilerplate - page no found!'
+
+block content
+  append sharedVars
+    - var currentNav = '/404.html';
+
+  .page-wrapper
+    h4.noselect
+      bold Page not found
+    p
+      a(href="./index.html") Go to main page

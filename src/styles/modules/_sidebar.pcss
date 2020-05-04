@@ -1,0 +1,33 @@
+#sidebar {
+  z-index: zIndex(sidebar);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  .sidebar-content {
+    @mixin flex column;
+    @mixin shadows lg;
+
+    background-color: $secondColor;
+    z-index: zIndex(sidebarContent);
+    padding-top: units(3);
+    height: 100%;
+    width: $sideBarWidth;
+    left: -100%;
+  }
+
+  #sidebar-mask {
+    @mixin flex column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: zIndex(sidebarMask);
+    margin-left: $sideBarWidth;
+    height: 100%;
+    width: 100%
+  }
+}

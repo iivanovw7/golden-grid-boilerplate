@@ -1,0 +1,6 @@
+Port = ":8627"
+NotFoundPage = "./404.html"
+DebugMsgPref = "Debug"
+InfoMsgPref = "Info"
+Domain = "*"
+Debug = true

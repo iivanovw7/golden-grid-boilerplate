@@ -1,0 +1,23 @@
+{
+    "source": {
+        "include": ["src", "README.md"]
+    },
+    "opts": {
+        "destination": "./dist/doc",
+        "template": "node_modules/better-docs",
+        "encoding": "utf8",
+        "recurse": true,
+        "tutorials": "doc"
+    },
+    "plugins": ["plugins/markdown"],
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc", "closure"]
+    },
+    "templates": {
+        "systemName": "VIP",
+        "theme": "cosmo",
+        "linenums": true,
+        "outputSourceFiles": true
+    }
+}

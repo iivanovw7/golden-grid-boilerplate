@@ -1,0 +1,26 @@
+mixin icon(iconHref, iconClass)
+  svg(class= iconClass)
+    use(href= iconHref)
+
+mixin menu(menu_items, current)
+  ul.menu-inner
+    each top_item in menu_items
+      li.menu-item
+        a(href= top_item.link, class= current === top_item.link ? 'menu-link is-active':'menu-link')= top_item.title
+
+mixin checkBoxSwitch(id, text)
+  label(class="check-switch" for= id)= text
+    input(type="checkbox" id= id)
+    span(aria-hidden="true")
+
+mixin socialIcons(social_items)
+  each social_item in social_items
+    button.icon-btn.ripple
+      +icon(social_item.id, social_item.title)
+
+mixin pagesSelector(pages)
+  ul
+    each page in pages
+      li.pages-selector-child
+        button.text-btn(onClick= `setCurrentPage(${page})`, value= `${page}`) #{page}
+        +icon('#horizontal-line', 'horizontal-line')

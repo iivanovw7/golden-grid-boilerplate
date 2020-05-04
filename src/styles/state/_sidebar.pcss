@@ -1,0 +1,23 @@
+#sidebar.is-opened {
+  @mixin animate darken-sidebar-wrapper, 1;
+
+  .sidebar-content {
+    @mixin animate show-sidebar-slider, 1;
+  }
+
+  #sidebar-mask {
+    display: block;
+  }
+}
+
+#sidebar.is-closed {
+  @mixin animate remove-sidebar-wrapper, 1;
+
+  .sidebar-content {
+    @mixin animate hide-sidebar-slider, 1;
+  }
+
+  #sidebar-mask {
+    display: none;
+  }
+}
