@@ -16,7 +16,7 @@ Golden canon grid boilerplate with example landing page.
 ### Description
 
 Golden canon grid website example created with *CSS* grids and *PUG* templating engine.
-Also includes *http server* application to serve website bundle and *docker* config.
+Also includes *http server* application to serve website bundle.
 
 Landing page design:
 ![Golden Canon Grid mockup](./images/home-page-mockup.png)
