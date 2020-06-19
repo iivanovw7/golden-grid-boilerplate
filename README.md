@@ -24,9 +24,7 @@ Landing page design:
 Landing page with grid:
 ![Golden Canon Grid mockup](./images/home-page-grid.png)
 
-Design used in this example is free and could be downloaded [here](https://www.massimpressions.com/mi-talent-free-download/).
-Direct download link for [PSD](https://drive.google.com/drive/folders/1xTWf2DC5Zoytavc7O6tPzxJOqFetroHp) files.
-Direct link with page [previews](https://drive.google.com/drive/folders/1TOQjMEg9eqXTxMCiCpMpo4D3a99jCA0c).
+Design used in this example is free and could be found [here](https://www.behance.net/gallery/63438655/MI-Talent-Free-PSD-Template).
 
 ---
 
